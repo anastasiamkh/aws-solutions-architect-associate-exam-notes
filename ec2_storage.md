@@ -148,28 +148,28 @@ AMIs enable you to create instances quickly, replicate environments, or launch m
 
 ### **EC2 Questions**
 
-1. **Scenario**: You need to run a high-traffic e-commerce website that experiences significant spikes during sales events. Which EC2 instance pricing model would you choose, and why? Explain how you would ensure cost-efficiency while handling traffic spikes.
+1. You need to run a high-traffic e-commerce website that experiences significant spikes during sales events. Which EC2 instance pricing model would you choose, and why? Explain how you would ensure cost-efficiency while handling traffic spikes.
    - **A)** On-Demand Instances, no scaling
    - **B)** Spot Instances with Auto Scaling
    - **C)** Reserved Instances with Auto Scaling
    - **D)** On-Demand Instances with Auto Scaling
    - **Answer**: **D)** On-Demand Instances with Auto Scaling for dynamic scaling during traffic spikes without upfront commitment.
 
-2. **Scenario**: You have multiple applications that need to run in isolated environments, but they share large datasets that need to be accessed by each application simultaneously. Which storage solution would you recommend, and how would you configure it?
+2. You have multiple applications that need to run in isolated environments, but they share large datasets that need to be accessed by each application simultaneously. Which storage solution would you recommend, and how would you configure it?
    - **A)** Instance Store
    - **B)** EBS volumes with separate EC2 instances
    - **C)** Amazon EFS with EC2 instances
    - **D)** S3 with EC2 instances
    - **Answer**: **C)** Amazon EFS with EC2 instances for shared, scalable storage with multi-instance access.
 
-3. **Scenario**: You’re running a machine learning workload that occasionally requires GPU-based EC2 instances for training, but there are long idle times between training cycles. What instance type and pricing model would you choose to minimize cost without compromising performance? Justify your decision.
+3. You’re running a machine learning workload that occasionally requires GPU-based EC2 instances for training, but there are long idle times between training cycles. What instance type and pricing model would you choose to minimize cost without compromising performance? Justify your decision.
    - **A)** On-Demand GPU instances
    - **B)** Spot GPU instances
    - **C)** Reserved GPU instances
    - **D)** General-purpose instances with Auto Scaling
    - **Answer**: **B)** Spot GPU instances for cost savings during idle times with fault-tolerant ML workloads.
 
-4. **Scenario**: You have a large-scale, latency-sensitive application that needs multiple EC2 instances to communicate quickly within the same Availability Zone. Which placement group would you use, and why? What are the potential downsides?
+4. You have a large-scale, latency-sensitive application that needs multiple EC2 instances to communicate quickly within the same Availability Zone. Which placement group would you use, and why? What are the potential downsides?
    - **A)** Spread Placement Group
    - **B)** Cluster Placement Group
    - **C)** Partition Placement Group
@@ -180,28 +180,28 @@ AMIs enable you to create instances quickly, replicate environments, or launch m
 
 ### **Storage Questions**
 
-5. **Scenario**: You are running a production database on EC2 with stringent IOPS and durability requirements. Which EBS volume type would you choose, and why? How would you optimize for performance while maintaining cost efficiency?
+5. You are running a production database on EC2 with stringent IOPS and durability requirements. Which EBS volume type would you choose, and why? How would you optimize for performance while maintaining cost efficiency?
    - **A)** General Purpose SSD (gp3)
    - **B)** Provisioned IOPS SSD (io2)
    - **C)** Cold HDD (sc1)
    - **D)** Instance Store
    - **Answer**: **B)** Provisioned IOPS SSD (io2) for high IOPS and durability, with cost optimization by right-sizing and performance tuning.
 
-6. **Scenario**: Your company needs to store large volumes of logs that are infrequently accessed but must be retained for compliance. Which EC2 storage solution would you recommend, and how would you manage the cost associated with storing the logs long term?
+6. Your company needs to store large volumes of logs that are infrequently accessed but must be retained for compliance. Which EC2 storage solution would you recommend, and how would you manage the cost associated with storing the logs long term?
    - **A)** Instance Store
    - **B)** EFS with Infrequent Access
    - **C)** Cold HDD (sc1) EBS volumes
    - **D)** Amazon S3 Glacier
    - **Answer**: **D)** Amazon S3 Glacier for low-cost, infrequently accessed storage suitable for compliance retention.
 
-7. **Scenario**: A critical application requires low-latency, high-performance storage for temporary data processing. The data does not need to persist when the instance is stopped. Would you choose EBS or Instance Store, and why?
+7. A critical application requires low-latency, high-performance storage for temporary data processing. The data does not need to persist when the instance is stopped. Would you choose EBS or Instance Store, and why?
    - **A)** EBS with io2 volumes
    - **B)** General Purpose SSD (gp3) EBS volumes
    - **C)** Instance Store
    - **D)** Amazon S3
    - **Answer**: **C)** Instance Store for low-latency, temporary storage needs that do not require persistence.
 
-8. **Scenario**: You need to create multiple EC2 instances across different regions that use the same base operating system configuration. How would you create an AMI, and how would you ensure that all instances, regardless of region, have the same configuration?
+8. You need to create multiple EC2 instances across different regions that use the same base operating system configuration. How would you create an AMI, and how would you ensure that all instances, regardless of region, have the same configuration?
    - **A)** Create an AMI and manually copy it to each region.
    - **B)** Use EC2 Auto Scaling with regional settings.
    - **C)** Create an AMI and copy it across regions via the AMI copy feature.
